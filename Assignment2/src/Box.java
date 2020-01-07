@@ -10,7 +10,9 @@ public class Box {
     * Constructor
     */
    public Box(int row, int col) {
-	   
+	   row = this.row;
+	   col = this.col;
+	   content = this.Player;
 	   // TODO: Initialise the variables row, col, and content
   
    }
@@ -19,7 +21,7 @@ public class Box {
     * Clear the box content to EMPTY
     */
    public void clear() {
-	   
+	   content = Player.EMPTY;
       // TODO: Set the value of content to EMPTY (Remember this is an enum)
 	   
    }
@@ -28,7 +30,20 @@ public class Box {
     * Display the content of the box
     */
    public void display() {
-	   
+	   switch(content) {
+		   case X: {
+			   System.out.println(" X ");
+			   break;
+		   }
+		   case O: {
+			   System.out.println(" O ");
+			  break;
+		   }
+		   case EMPTY: {
+			   System.out.println("   ");
+			   break;
+		   }
+	   }
 	   // TODO: Print the content of this box (" X " if it Player.X, " O " for Player.O and "   " for Player.Empty)
 	   // Hint: Can use an if-else or switch statement
 	   
